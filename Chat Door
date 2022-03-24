@@ -1,0 +1,17 @@
+--КОПИРУЙТЕ ВЕСЬ ТЕКСТ КОТОРЫЙ ВЫ ВИДИТЕ НИЖЕ.
+--СОЗДАЙТЕ PART ДВЕРИ И СКРИПТ ЗАТЕМ ВСТАВЬТЕ ВЕСЬ ЭТОТ ТЕКСТ!
+--MADE BY K1ttyCat
+
+local waittime = 3 -- Время, открытой двери
+
+game.Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(msg)
+		if msg == "кекс" then -- Введите текст, который будет открывать дверь
+			script.Parent.CanCollide = false
+			script.Parent.Transparency = 0.6 -- 0.6 Означает прозрачность двери при открытии
+			wait(waittime)
+			script.Parent.CanCollide = true
+			script.Parent.Transparency = 0
+		end
+	end)
+end)
